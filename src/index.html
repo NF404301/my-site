@@ -1,561 +1,246 @@
-<!--
-
-=========================================================
-* Neumorphism UI - v1.0.0
-=========================================================
-
-* Product Page: https://themesberg.com/product/ui-kits/neumorphism-ui
-* Copyright 2020 Themesberg MIT LICENSE (https://www.themesberg.com/licensing#mit)
-
-* Coded by https://themesberg.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
--->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
-<head> 
+<head>
     @@include('./_head.html', {
         "path": ".",
-        "title": "Neumorphism UI"
+        "title": "NF404301"
     })
+
+    <style>
+        .portfolio-shell {
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        .portfolio-sidebar {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .profile-card,
+        .content-panel {
+            background: #e6e7ee;
+            border: 1px solid #d1d9e6;
+            border-radius: 1rem;
+            box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+        }
+
+        .profile-avatar {
+            width: 132px;
+            height: 132px;
+            object-fit: cover;
+        }
+
+        .side-link {
+            display: block;
+            width: 100%;
+            padding: .9rem 1rem;
+            margin-bottom: .75rem;
+            color: #31344b;
+            text-align: left;
+            border-radius: .75rem;
+            border: 1px solid #d1d9e6;
+            background: #e6e7ee;
+            box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+        }
+
+        .side-link:hover,
+        .side-link.active {
+            color: #31344b;
+            text-decoration: none;
+            box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #ffffff;
+        }
+
+        .content-panel {
+            min-height: 620px;
+        }
+
+        .project-card {
+            height: 100%;
+            border-radius: .9rem;
+            border: 1px solid #d1d9e6;
+            background: #e6e7ee;
+            box-shadow: 4px 4px 8px #b8b9be, -4px -4px 8px #ffffff;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: .45rem .75rem;
+            margin: 0 .5rem .5rem 0;
+            border-radius: 999px;
+            border: 1px solid #d1d9e6;
+            color: #31344b;
+            box-shadow: 2px 2px 5px #b8b9be, -2px -2px 5px #ffffff;
+        }
+
+        @media (max-width: 991.98px) {
+            .portfolio-sidebar {
+                position: static;
+                margin-bottom: 1.5rem;
+            }
+
+            .content-panel {
+                min-height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    @@include('./_navigation.html', {
-        "path": ".",
-        "classes": "navbar-light navbar-transparent navbar-theme-primary"
-    })
-    <main>
+    <main class="portfolio-shell">
+        <div class="container">
+            <div class="row">
+                <aside class="col-lg-4 col-xl-3">
+                    <div class="portfolio-sidebar">
+                        <div class="profile-card p-4 text-center mb-4">
+                            <img src="./assets/img/avatar.jpg" class="profile-avatar rounded-circle shadow-soft mb-4" alt="NF404301">
 
-        <!-- Hero -->
-        <section class="section section bg-soft pb-5 overflow-hidden z-2">
-            <div class="container z-2">
-                <div class="row justify-content-center text-center pt-6">
-                    <div class="col-lg-8 col-xl-8">
-                        <h1 class="display-2 mb-3">Neumorphism UI</h1>
-                        <p class="lead px-md-6 mb-5">Neumorphism inspired <strong>User Interface Kit</strong> that will help you prototype and design beautiful, creative and modern websites.</p>
-                        <div class="d-flex flex-column flex-wrap flex-md-row justify-content-md-center mb-5">
-                            <a href="https://themesberg.com/product/ui-kits/neumorphism-ui" target="_blank" class="btn btn-primary mb-3 mb-lg-0 mr-3"><i class="fas fa-cloud-download-alt mr-2"></i> Download</a>
-                            <div class="mt-2">
-                                <a class="github-button" href="https://github.com/themesberg/neumorphism-ui" data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themesberg/neumorphism-ui on GitHub">Star</a>
-                            </div>
-                        </div>
-                        <a href="https://themesberg.com" target="_blank" class="d-flex align-items-center justify-content-center flex-column">
-                            <img src="./assets/img/themesberg.svg" height="25" class="mb-3" alt="Themesberg Logo">
-                            <span class="text-muted font-small">A Themesberg production</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-lg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5 mb-md-0">
-                            <div class="icon icon-shape icon-lg bg-soft shadow-soft border border-light rounded-circle mb-3">
-                                <span class="fas fa-box-open"></span>
-                            </div>
-                            <h2 class="h5 my-3">Over 200 components</h2>
-                            <p class="px-lg-4">Beatifully crafted and neumorphism inspired elements</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-12 col-md-4 mb-5 mb-md-0">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center">
-                            <div class="icon icon-shape icon-lg bg-soft shadow-soft border border-light rounded-circle mb-3">
-                                <span class="fas fa-pager"></span>
-                            </div>
-                            <h2 class="h5 my-3">10+ sections</h2>
-                            <p class="px-lg-4">Navigation bars, pricing cards, footers and many more sections to enhance page variety</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-12 col-md-4 mb-5 mb-md-0">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center">
-                            <div class="icon icon-shape icon-lg bg-soft shadow-soft border border-light rounded-circle mb-3">
-                                <span class="far fa-file-alt"></span>
-                            </div>
-                            <h2 class="h5 my-3">5 example pages</h2>
-                            <p class="px-lg-4">We took the time to create a few example pages to show you how neumorphic pages can look like</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <h1 class="h3 mb-2">NF404301</h1>
 
-        @@include('./components/_accordions.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_alerts.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_badges.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_cards.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_bootstrap-carousels.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_breadcrumbs.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_buttons.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_forms.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_modals.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_navs.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_pagination.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_pagination.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_progress-bars.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_tables.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_tabs.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_toasts.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_tooltips.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        @@include('./components/_typography.html', {
-            "path": ".",
-            "classes": "bg-primary pt-0"
-        })
-
-        <!-- si asa mai departe -->
-        
-        <section class="section section-md bg-soft">
-            <div class="container">
-                <div class="row justify-content-center mb-5 mb-lg-6">
-                    <div class="col-12 text-center">
-                        <h2 class="h1 px-lg-5">5 neumorphic example pages</h2>
-                    </div>
-                </div>
-    
-                @@include("./_pages-preview.html", {
-                    "path": "./",
-                    "path_pages": "./html/pages"
-                })
-
-            </div>
-        </section>
-        <section class="section section-lg bg-soft">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h1 class="font-weight-light">Notable <span class="font-weight-bold">features</span></h1>
-                        <p class="lead">You get all Bootstrap components fully customized. Besides, you receive numerous plugins out of the box and ready to use</p>
-                    </div>
-                </div>
-                <div class="row mt-6">
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fab fa-bootstrap"></span>
-                            </div>
-                            <h2 class="h5 my-3">Latest Bootstrap</h2>
-                            <p>A responsive and mobile-first theme built with the world's most popular CSS framework</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fab fa-sass"></span>
-                            </div>
-                            <h2 class="h5 my-3">Build with Sass</h2>
-                            <p>Change one variable and the theme adapts. Colors, fonts, sizes, buttons... you name it
+                            <p class="mb-4">
+                                前端学习者<br>
+                                独立创作者
                             </p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fas fa-mobile-alt"></span>
-                            </div>
-                            <h2 class="h5 my-3">Responsive Design</h2>
-                            <p>Did you know 53% of the world web traffic is mobile? Neumorphism UI is fully responsive and mobile first</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fas fa-puzzle-piece"></span>
-                            </div>
-                            <h2 class="h5 my-3">Modular approach</h2>
-                            <p>Nicely customized components that can be reused anytime and anywhere in your project</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fab fa-gulp"></span>
-                            </div>
-                            <h2 class="h5 my-3">Gulp & BrowserSync</h2>
-                            <p>With our custom Gulp commands & BrowserSync we offer a seemless and fast workflow for your project</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fas fa-file-alt"></span>
-                            </div>
-                            <h2 class="h5 my-3">Well documented</h2>
-                            <p>Our kit is delivered with very detailed documentation, describing all components, styles and usages</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fas fa-tachometer-alt"></span>
-                            </div>
-                            <h2 class="h5 my-3">Google PageSpeed</h2>
-                            <p>Neumorphism UI has 80+ scores on Google PageSpeed Insights to offer you and your clients a fast website
-                            </p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <span class="fas fa-image"></span>
-                            </div>
-                            <h2 class="h5 my-3">SVG illustrations</h2>
-                            <p>Photography and Illustration SVGs are included in the download package and are free to use
-                            </p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- Icon box -->
-                        <div class="icon-box text-center mb-5">
-                            <div class="icon icon-shape icon-shape-sm shadow-soft border border-light rounded-circle">
-                                <img class="navbar-brand-dark" style="height: 20px;" src="./assets/img/brand/dark.svg" alt="Neumorphism logo">
-                            </div>
-                            <h2 class="h5 my-3">Neumorphic design</h2>
-                            <p>We crafted each component with great care so it represents the latest neumorphic design trend</p>
-                        </div>
-                        <!-- End of Icon box -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-lg bg-soft">
-            <div class="container">
-                <div class="row justify-content-center mb-5 mb-lg-6">
-                    <div class="col-12 text-center">
-                        <h2 class="h1 px-lg-5">What's inside?</h2>
-                        <p class="lead px-lg-8">We have carefully crafted the perfect folder structure to ensure that finding the files you're looking for are easily reachable and well organized.</p>
-                    </div>
-                </div>
-                <div class="row d-flex align-items-center">
-                    <div class="col-12 col-lg-6 mb-4">
-                        <div class="d-none d-lg-block mt-5">
-                            <h3 class="h4">You need only HTML, CSS and Javascript?</h3>
-                            <p class="lead mb-4">Don't worry, we got you covered. We have a folder called <code class="text-danger">html&css</code> which includes only the basic HTML5, CSS3 and Javascript technologies.</p>
-                            <a href="https://themesberg.com/docs/neumorphism-ui/getting-started/file-structure/" target="_blank" class="btn btn-primary"><span class="fas fa-book mr-2"></span> File Structure</a>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6 order-lg-first d-flex justify-content-center">
-                        <ul class="d-block fmw-100 list-style-none folder-structure">
-                            <li data-toggle="tooltip" data-placement="left" title="Main folder that you will be working with"><span class="fas fa-folder mr-2"></span>src</li>
-                            <li>
-                                <ul class="list-style-none pl-4">
-                                    <li data-toggle="tooltip" data-placement="left" title="CSS, Images, Fonts and Javascript"><span class="fas fa-folder mr-2"></span> assets</li>
-                                    <li data-toggle="tooltip" data-placement="left" title="HTML templates"><span class="fas fa-folder mr-2"></span> html</li>
-                                    <li data-toggle="tooltip" data-placement="left" title="Partials are HTML snippets that are included in multiple pages, such as the menu or footer"><span class="fas fa-folder mr-2"></span> partials</li>
-                                    <li data-toggle="tooltip" data-placement="left" title="Sass source files"><span class="fas fa-folder mr-2"></span> scss</li>
-                                    <li data-toggle="tooltip" data-placement="left" title="The page you're looking at right now. Call it inception."><span class="fab fa-html5 mr-2 text-secondary"></span> index.html</li>
-                                </ul>
-                            </li>
-                            <li data-toggle="tooltip" data-placement="left" title="Neumorphism UI with only HTML, CSS and Javascript"><span class="fas fa-folder mr-2 text-muted"></span> html&css</li>
-                            <li data-toggle="tooltip" data-placement="left" title="Temporary folder that is created when serving files with BrowserSync"><span class="fas fa-folder text-muted mr-2"></span>.temp</li>
-                            <li data-toggle="tooltip" data-placement="left" title="Minified version of the project"><span class="fas fa-folder mr-2 text-muted"></span> dist</li>
-                            <li data-toggle="tooltip" data-placement="left" title="Project dependencies from package.json"><span class="fas fa-folder text-muted mr-2"></span> node_modules
-                            </li>
-                            <li data-toggle="tooltip" data-placement="left" title="Development workflow commands. We have them well documented."><span class="fab fa-js-square mr-2 text-warning"></span> gulpfile.js</li>
-                            <li data-toggle="tooltip" data-placement="left" title="Project details and dependencies."><span class="fas fa-file-code mr-2 text-tertiary"></span> package.json</li>
-                            <li data-toggle="tooltip" data-placement="left" title="No project can miss a README :)"><span class="fas fa-file-code mr-2 text-tertiary"></span> README.md</li>
-                            <li data-toggle="tooltip" data-placement="left" title="This file ensures that generated files and folder are ignored by Git. (eg. node_modules)">
-                                <span class="fas fa-file-code mr-2 text-tertiary"></span> .gitignore</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 mt-5 d-lg-none">
-                        <h3 class="h5">You need only HTML, CSS and Javascript?</h3>
-                        <p>Don't worry, we got you covered. We have a folder called <code class="text-danger">html&css</code> which includes only the basic HTML5, CSS3 and Javascript technologies.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-lg bg-soft">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-10 col-xl-12">
-                        <h1 class="font-weight-light mb-4">WCAG 2.1 accessible <span class="font-weight-bold">color scheme</span>
-                        </h1>
-                        <p class="lead">
-                            We've enhanced the color settings <br> to comply with the latest accessibility standards
-                        </p>
-                    </div>
-                </div>
-                <div class="row mt-6">
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-light p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-soft m-auto"></div>
-                            <div class="mt-4">
-                                <h2 class="h5 text-dark">Primary:</h2>
-                                <span class="font-weight-bold text-dark">#174F84</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-soft p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-secondary m-auto"></div>
-                            <div class="mt-4">
-                                <h2 class="h5 text-dark">Secondary:</h2>
-                                <span class="font-weight-bold text-dark">#10AB7C</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-soft p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-info m-auto"></div>
-                            <div class="mt-4 text-dark">
-                                <h2 class="h5">Info:</h2>
-                                <span class="font-weight-bold text-dark">#1E90FF</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-soft p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-warning m-auto"></div>
-                            <div class="mt-4 text-dark">
-                                <h2 class="h5">Warning:</h2>
-                                <span class="font-weight-bold text-dark">#F5B759</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-soft p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-success m-auto"></div>
-                            <div class="mt-4 text-dark">
-                                <h2 class="h5">Success:</h2>
-                                <span class="font-weight-bold text-dark">#00BF9A</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-soft p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-danger m-auto"></div>
-                            <div class="mt-4 text-dark">
-                                <h2 class="h5">Danger:</h2>
-                                <span class="font-weight-bold text-dark">#FA5252</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-3">
-                        <div class="card shadow-soft border-light bg-soft p-5 text-center mb-4">
-                            <div class="color-shape rounded bg-dark m-auto"></div>
-                            <div class="mt-4">
-                                <h2 class="h5 text-dark">Dark:</h2>
-                                <span class="font-weight-bold text-dark">#2A354F</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-lg bg-soft">
-            <div class="container">
-                <div class="row justify-content-center text-center text-dark mb-5">
-                    <div class="col-lg-9 col-xl-8">
-                        <h2 class="h1 font-weight-light mb-3">Less <span class="font-weight-bold">work</span>, more <span class="font-weight-bold">flow</span>.</h2>
-                        <p class="lead">
-                            Boost productivity with BrowserSync. SCSS changes are reflected instantly and pages scroll and refresh on devices as you work.
-                        </p>
-                    </div>
-                </div>
-                <div class="row justify-content-center mb-6">
-                    <div class="col-md-10 col-xl-9">
-                        <div class="position-relative">
-                            <div class="rounded shadow-soft border border-light bg-soft p-4 mb-2">
-                                <div class="mb-3">
-                                    <div class="font-weight-normal">&gt; $ npm install</div>
-                                    <div class="text-muted">Everything’s installed!</div>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="font-weight-normal">&gt; $ gulp</div>
-                                    <div class="text-muted">SCSS watching</div>
-                                    <div class="text-muted">LiveReload started</div>
-                                    <div class="text-muted">Opening localhost:3000</div>
-                                </div>
-                                <div>
-                                    <div class="font-weight-normal">&gt; $ that's it?</div>
-                                    <div class="text-muted">It's that simple!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="alert alert-dark shadow-soft position-relative mt-4"><span class="fas fa-question-circle mr-2"></span> Looks unfamiliar? Don’t worry! Our <a class="text-dark font-weight-bold text-underline" href="https://themesberg.com/docs/neumorphism-ui/getting-started/quick-start/" target="_blank">documentation</a> has got you covered.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-lg overflow-hidden">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-8">
-                        <h2 class="h1 font-weight-light mb-3"><strong>Open source</strong> project</h2>
-                        <p class="lead mb-4">Neumorphism UI is an open source UI Kit that is licensed under the MIT License. Consider giving us a star on the official Github repository to spread the news!</p>
-                        <div class="d-flex align-items-center">
-                            <a href="https://github.com/themesberg/neumorphism" target="_blank" class="btn btn-primary mr-4">
-                                <span class="fab fa-github mr-1"></span> View on GitHub
+
+                            <a href="https://github.com/NF404301" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                                GitHub
                             </a>
-                            <!-- Place this tag where you want the button to render. -->
-                            <div class="mt-2">
-                                <!-- Place this tag where you want the button to render. -->
-                                <a class="github-button" href="https://github.com/themesberg/neumorphism-ui" data-color-scheme="no-preference: dark; light: light; dark: light;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themesberg/neumorphism-ui on GitHub">Star</a>                            
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <div class="github-big-icon">
-                            <span class="fab fa-github"></span>
-                        </div>
-                      </div>
-                </div>
-                <div class="row mt-6">
-                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="card bg-soft shadow-soft border-light p-4">
-                            <!-- Header -->
-                            <div class="card-header pb-0">
-                                <span class="d-block">
-                                    <span class="h2 font-weight-bold align-top">Free Demo</span>
-                                </span>
-                            </div>
-                            <!-- End Header -->
-                            <!-- Content -->
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush price-list">
-                                    <li class="list-group-item bg-soft pl-0"><strong>200</strong> Components</li>
-                                    <li class="list-group-item bg-soft pl-0"><strong>5</strong> Example Pages</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-danger"><span class="fas fa-times-circle"></span></span> Uncoventional cards</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-danger"><span class="fas fa-times-circle"></span></span> Timelines</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-danger"><span class="fas fa-times-circle"></span></span> E-commerce</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-danger"><span class="fas fa-times-circle"></span></span> Widgets</li>
-                                    <li class="list-group-item bg-soft pl-0 pb-0"><span class="text-danger"><span class="fas fa-times-circle"></span></span> Premium Support</li>
-                                </ul>
-                            </div>
-                            <!-- End Content -->
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 mt-lg-n4">
-                        <div class="card bg-soft shadow-soft border-light p-4">
-                            <!-- Header -->
-                            <div class="card-header pb-0">
-                                <span class="d-block">
-                                    <span class="h2 font-weight-bold align-top">Pro Version</span>
-                                </span>
-                            </div>
-                            <!-- End Header -->
-                            <!-- Content -->
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush price-list">
-                                    <li class="list-group-item bg-soft pl-0"><strong>1000+</strong> Components</li>
-                                    <li class="list-group-item bg-soft pl-0"><strong>13</strong> Example Pages</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-success"><span class="fas fa-check-circle"></span></span> Uncoventional cards</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-success"><span class="fas fa-check-circle"></span></span> Timelines</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-success"><span class="fas fa-check-circle"></span></span> E-commerce</li>
-                                    <li class="list-group-item bg-soft pl-0"><span class="text-success"><span class="fas fa-check-circle"></span></span> Widgets</li>
-                                    <li class="list-group-item bg-soft border-0 pl-0 pb-0"><span class="text-success"><span class="fas fa-check-circle"></span></span> Premium Support</li>
-                                </ul>
-                                <a href="https://themesberg.com/product/ui-kits/neumorphism-ui-pro" target="_blank" class="btn btn-block btn-primary text-secondary mt-4 mr-3"><i class="far fa-paper-plane mr-2"></i> Upgrade to PRO</a>
-                            </div>
-                            <!-- End Content -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </main>
 
-    @@include('./_footer.html', {
-        "path": ".",
-        "classes": "bg-primary"
-    })
+                        <nav class="profile-card p-3 nav flex-column" role="tablist">
+                            <a class="side-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">
+                                <span class="fas fa-user mr-2"></span>
+                                关于我
+                            </a>
+
+                            <a class="side-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">
+                                <span class="fas fa-folder-open mr-2"></span>
+                                项目作品
+                            </a>
+
+                            <a class="side-link" id="skills-tab" data-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="false">
+                                <span class="fas fa-code mr-2"></span>
+                                技能栈
+                            </a>
+
+                            <a class="side-link mb-0" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                                <span class="fas fa-envelope mr-2"></span>
+                                联系方式
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <section class="col-lg-8 col-xl-9">
+                    <div class="content-panel p-4 p-md-5">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+                                <p class="text-uppercase small mb-3">Personal Website</p>
+
+                                <h2 class="display-3 mb-4">你好，我是 NF404301。</h2>
+
+                                <p class="lead">
+                                    我正在学习和构建简洁、实用、有质感的网页体验。
+                                    这个网站是我的个人空间，用来展示项目、记录想法和整理成长过程。
+                                </p>
+
+                                <p>
+                                    我喜欢前端开发、界面设计、静态网站部署，以及各种能提升效率的小工具。
+                                    目前这个站点使用 Bootstrap 和 Neumorphism UI 风格搭建，并部署在 Vercel 上。
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+                                <h2 class="h1 mb-4">项目作品</h2>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="project-card p-4">
+                                            <h3 class="h5">个人主页</h3>
+                                            <p>
+                                                一个带有左侧导航和右侧内容切换的个人主页，用来展示个人介绍、作品和联系方式。
+                                            </p>
+                                            <a href="#" class="btn btn-primary btn-sm">查看项目</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-4">
+                                        <div class="project-card p-4">
+                                            <h3 class="h5">网页工具</h3>
+                                            <p>
+                                                计划制作一些浏览器内可用的小工具，例如笔记、导航、效率工具或自动化页面。
+                                            </p>
+                                            <a href="#" class="btn btn-primary btn-sm">查看项目</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-4">
+                                        <div class="project-card p-4">
+                                            <h3 class="h5">设计实验</h3>
+                                            <p>
+                                                尝试不同的 UI 风格、布局方式、交互动效和视觉细节。
+                                            </p>
+                                            <a href="#" class="btn btn-primary btn-sm">查看项目</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-4">
+                                        <div class="project-card p-4">
+                                            <h3 class="h5">学习记录</h3>
+                                            <p>
+                                                记录前端、部署、GitHub、Vercel 和网站搭建过程中遇到的问题与解决方法。
+                                            </p>
+                                            <a href="#" class="btn btn-primary btn-sm">阅读记录</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+                                <h2 class="h1 mb-4">技能栈</h2>
+
+                                <p class="lead">
+                                    当前主要关注网页基础、静态网站部署和个人项目开发。
+                                </p>
+
+                                <div class="mb-4">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Bootstrap</span>
+                                    <span class="tag">GitHub</span>
+                                    <span class="tag">Vercel</span>
+                                    <span class="tag">响应式布局</span>
+                                    <span class="tag">UI 设计</span>
+                                </div>
+
+                                <p>
+                                    后续可以继续添加 React、Vue、Node.js、数据库、自动化脚本等内容。
+                                </p>
+                            </div>
+
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <h2 class="h1 mb-4">联系方式</h2>
+
+                                <p class="lead">
+                                    你可以通过下面的方式找到我。
+                                </p>
+
+                                <a href="https://github.com/NF404301" class="btn btn-primary mr-3 mb-3" target="_blank" rel="noopener">
+                                    GitHub
+                                </a>
+
+                                <a href="mailto:your-email@example.com" class="btn btn-primary mb-3">
+                                    邮箱
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
     @@include('./_scripts.html', {
         "path": "."
