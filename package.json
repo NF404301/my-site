@@ -4,8 +4,8 @@
     "description": "Neumorphism inspired premium Bootstrap UI Kit featuring over 100 components and 5 example pages.",
     "main": "gulpfile.js",
     "scripts": {
-    "build": "gulp build:dist",
-    "start": "gulp"
+    "build": "node ./node_modules/gulp/bin/gulp.js build:dist",
+    "start": "node ./node_modules/gulp/bin/gulp.js"
      },
     "author": "Themesberg",
     "keywords": [
